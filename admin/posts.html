@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarządzanie Postami - TineHC</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="admin-panel">
+    <div class="admin-container">
+        <nav class="admin-sidebar">
+            <div class="admin-brand">
+                <img src="../images/logo.png" alt="TineHC" class="admin-logo">
+                <h1>TineHC</h1>
+            </div>
+            
+            <div class="admin-user">
+                <img src="../images/admin-avatar.png" alt="Admin" class="admin-avatar">
+                <div class="admin-user-info">
+                    <span class="admin-username">Admin</span>
+                    <span class="admin-role">Administrator</span>
+                </div>
+            </div>
+            
+            <ul class="admin-menu">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="users.html">
+                        <i class="fas fa-users"></i>
+                        <span>Użytkownicy</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="posts.html">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Posty</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="reports.html">
+                        <i class="fas fa-flag"></i>
+                        <span>Zgłoszenia</span>
+                        <span class="badge">3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="bans.html">
+                        <i class="fas fa-ban"></i>
+                        <span>Bany</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Ustawienia</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Szukaj postów...">
+                </div>
+                
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">5</span>
+                    </button>
+                    <button class="theme-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="../index.html" class="exit-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div class="posts-page">
+                <div class="page-header">
+                    <h2>Zarządzanie Postami</h2>
+                    <div class="header-actions">
+                        <button class="add-post-btn">
+                            <i class="fas fa-plus"></i>
+                            Nowy post
+                        </button>
+                        <button class="export-btn">
+                            <i class="fas fa-download"></i>
+                            Eksportuj
+                        </button>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Kategoria</label>
+                        <select>
+                            <option value="">Wszystkie</option>
+                            <option value="announcements">Ogłoszenia</option>
+                            <option value="news">Aktualności</option>
+                            <option value="guides">Poradniki</option>
+                            <option value="discussion">Dyskusje</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select>
+                            <option value="">Wszystkie</option>
+                            <option value="published">Opublikowane</option>
+                            <option value="draft">Szkic</option>
+                            <option value="archived">Zarchiwizowane</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Sortuj</label>
+                        <select>
+                            <option value="newest">Najnowsze</option>
+                            <option value="oldest">Najstarsze</option>
+                            <option value="popular">Najpopularniejsze</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="posts-grid">
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="post-meta">
+                                <span class="post-category announcements">Ogłoszenia</span>
+                                <span class="post-status published">Opublikowany</span>
+                            </div>
+                            <div class="post-actions">
+                                <button class="action-btn pin" title="Przypnij">
+                                    <i class="fas fa-thumbtack"></i>
+                                </button>
+                                <button class="action-btn more" title="Więcej">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="post-title">Aktualizacja serwera - 1.19.4</h3>
+                        <p class="post-excerpt">
+                            Informujemy o planowanej aktualizacji serwera do wersji 1.19.4. Aktualizacja odbędzie się...
+                        </p>
+                        <div class="post-footer">
+                            <div class="post-info">
+                                <img src="../images/admin-avatar.png" alt="Author" class="author-avatar">
+                                <div class="post-details">
+                                    <span class="author-name">Admin</span>
+                                    <span class="post-date">15 marca 2024</span>
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <span><i class="fas fa-comment"></i> 12</span>
+                                <span><i class="fas fa-eye"></i> 234</span>
+                                <span><i class="fas fa-heart"></i> 45</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Więcej kart postów... -->
+                </div>
+
+                <div class="pagination">
+                    <button class="prev-page" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="page-numbers">
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <span>...</span>
+                        <button>10</button>
+                    </div>
+                    <button class="next-page">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html> 

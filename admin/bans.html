@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarządzanie Banami - TineHC</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="admin-panel">
+    <div class="admin-container">
+        <nav class="admin-sidebar">
+            <div class="admin-brand">
+                <img src="../images/logo.png" alt="TineHC" class="admin-logo">
+                <h1>TineHC</h1>
+            </div>
+            
+            <div class="admin-user">
+                <img src="../images/admin-avatar.png" alt="Admin" class="admin-avatar">
+                <div class="admin-user-info">
+                    <span class="admin-username">Admin</span>
+                    <span class="admin-role">Administrator</span>
+                </div>
+            </div>
+            
+            <ul class="admin-menu">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="users.html">
+                        <i class="fas fa-users"></i>
+                        <span>Użytkownicy</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="posts.html">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Posty</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="reports.html">
+                        <i class="fas fa-flag"></i>
+                        <span>Zgłoszenia</span>
+                        <span class="badge">3</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="bans.html">
+                        <i class="fas fa-ban"></i>
+                        <span>Bany</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Ustawienia</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Szukaj banów...">
+                </div>
+                
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">5</span>
+                    </button>
+                    <button class="theme-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="../index.html" class="exit-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div class="bans-page">
+                <div class="page-header">
+                    <h2>Zarządzanie Banami</h2>
+                    <div class="header-actions">
+                        <button class="add-ban-btn">
+                            <i class="fas fa-user-slash"></i>
+                            Nowy ban
+                        </button>
+                        <button class="export-btn">
+                            <i class="fas fa-download"></i>
+                            Eksportuj
+                        </button>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Typ</label>
+                        <select>
+                            <option value="">Wszystkie</option>
+                            <option value="permanent">Permanentny</option>
+                            <option value="temporary">Tymczasowy</option>
+                            <option value="warning">Ostrzeżenie</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select>
+                            <option value="">Wszystkie</option>
+                            <option value="active">Aktywny</option>
+                            <option value="expired">Wygasły</option>
+                            <option value="lifted">Zdjęty</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Sortuj</label>
+                        <select>
+                            <option value="newest">Najnowsze</option>
+                            <option value="oldest">Najstarsze</option>
+                            <option value="expiring">Wygasające</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="bans-list">
+                    <div class="ban-card">
+                        <div class="ban-header">
+                            <div class="ban-meta">
+                                <span class="ban-type permanent">Permanentny</span>
+                                <span class="ban-status active">Aktywny</span>
+                            </div>
+                            <div class="ban-date">
+                                <i class="fas fa-clock"></i>
+                                Nałożony 15 marca 2024
+                            </div>
+                        </div>
+
+                        <div class="ban-content">
+                            <div class="banned-user">
+                                <img src="../images/user-avatar.png" alt="Banned User" class="user-avatar">
+                                <div class="user-info">
+                                    <span class="user-name">Spammer123</span>
+                                    <span class="user-id">ID: #12345</span>
+                                </div>
+                            </div>
+
+                            <div class="ban-details">
+                                <div class="ban-reason">
+                                    <h4>Powód bana</h4>
+                                    <p>Wielokrotne spamowanie reklamami w różnych wątkach forum.</p>
+                                </div>
+
+                                <div class="ban-info">
+                                    <div class="info-item">
+                                        <span class="label">Nałożony przez:</span>
+                                        <span class="value">Admin</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="label">Wygasa:</span>
+                                        <span class="value">Nigdy</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="label">IP:</span>
+                                        <span class="value">192.168.1.xxx</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ban-history">
+                                <h4>Historia banów</h4>
+                                <div class="history-item">
+                                    <span class="history-date">10 marca 2024</span>
+                                    <span class="history-type warning">Ostrzeżenie</span>
+                                    <span class="history-duration">3 dni</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ban-actions">
+                            <button class="action-btn edit">
+                                <i class="fas fa-edit"></i>
+                                Edytuj
+                            </button>
+                            <button class="action-btn lift">
+                                <i class="fas fa-unlock"></i>
+                                Zdejmij bana
+                            </button>
+                            <button class="action-btn delete">
+                                <i class="fas fa-trash"></i>
+                                Usuń
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Więcej kart banów... -->
+                </div>
+
+                <div class="pagination">
+                    <button class="prev-page" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="page-numbers">
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <span>...</span>
+                        <button>10</button>
+                    </div>
+                    <button class="next-page">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ogłoszenia - TineHC Forum</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../forum.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TineHC</h1>
+            <p class="subtitle">Ogłoszenia</p>
+        </header>
+        
+        <nav class="forum-nav">
+            <a href="../tinehc.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Powrót do forum</a>
+            <a href="new-topic.html?category=ogloszenia" class="nav-btn create-topic"><i class="fas fa-plus"></i> Nowy temat</a>
+        </nav>
+
+        <main class="forum-container">
+            <div class="topics-list">
+                <div class="topic-filters">
+                    <div class="filter-group">
+                        <button class="filter-btn active">Wszystkie</button>
+                        <button class="filter-btn">Ważne</button>
+                        <button class="filter-btn">Rozwiązane</button>
+                    </div>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Szukaj w ogłoszeniach...">
+                    </div>
+                </div>
+
+                <div class="topic pinned">
+                    <div class="topic-icon">
+                        <i class="fas fa-thumbtack"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Witamy na forum TineHC!</h3>
+                        <div class="topic-meta">
+                            <span><i class="fas fa-user"></i> Admin</span>
+                            <span><i class="fas fa-clock"></i> 2 dni temu</span>
+                            <span><i class="fas fa-comments"></i> 5 odpowiedzi</span>
+                            <span><i class="fas fa-eye"></i> 234 wyświetleń</span>
+                        </div>
+                    </div>
+                    <div class="topic-status">
+                        <span class="status-badge important">Ważne</span>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <div class="topic-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Aktualizacja serwera - 1.19.4</h3>
+                        <div class="topic-meta">
+                            <span><i class="fas fa-user"></i> Moderator</span>
+                            <span><i class="fas fa-clock"></i> wczoraj</span>
+                            <span><i class="fas fa-comments"></i> 3 odpowiedzi</span>
+                            <span><i class="fas fa-eye"></i> 156 wyświetleń</span>
+                        </div>
+                    </div>
+                    <div class="topic-status">
+                        <span class="status-badge update">Aktualizacja</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="forum-sidebar">
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-info-circle"></i> O dziale</h3>
+                    <p>Tutaj znajdziesz wszystkie ważne ogłoszenia dotyczące serwera TineHC.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <i class="fas fa-folder"></i>
+                            <span>2 tematy</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-comments"></i>
+                            <span>8 postów</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3><i class="fas fa-star"></i> Zasady działu</h3>
+                    <ul>
+                        <li>Tylko administracja może tworzyć ogłoszenia</li>
+                        <li>Zachowaj kulturę w komentarzach</li>
+                        <li>Nie spamuj</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <script src="../forum.js"></script>
+</body>
+</html> 

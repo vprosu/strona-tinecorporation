@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administracyjny - TineHC</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="admin-panel">
+    <div class="admin-container">
+        <nav class="admin-sidebar">
+            <div class="admin-brand">
+                <img src="../images/logo.png" alt="TineHC" class="admin-logo">
+                <h1>TineHC</h1>
+            </div>
+            
+            <div class="admin-user">
+                <img src="../images/admin-avatar.png" alt="Admin" class="admin-avatar">
+                <div class="admin-user-info">
+                    <span class="admin-username">Admin</span>
+                    <span class="admin-role">Administrator</span>
+                </div>
+            </div>
+            
+            <ul class="admin-menu">
+                <li class="active">
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="users.html">
+                        <i class="fas fa-users"></i>
+                        <span>Użytkownicy</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="posts.html">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Posty</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="reports.html">
+                        <i class="fas fa-flag"></i>
+                        <span>Zgłoszenia</span>
+                        <span class="badge">3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="bans.html">
+                        <i class="fas fa-ban"></i>
+                        <span>Bany</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Ustawienia</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Szukaj...">
+                </div>
+                
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">5</span>
+                    </button>
+                    <button class="theme-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="../index.html" class="exit-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div class="dashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon users">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value">256</span>
+                            <span class="stat-label">Użytkowników</span>
+                        </div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>12%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon posts">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value">1,234</span>
+                            <span class="stat-label">Postów</span>
+                        </div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>8%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon comments">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value">5,678</span>
+                            <span class="stat-label">Komentarzy</span>
+                        </div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>15%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon reports">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">Zgłoszenia</span>
+                        </div>
+                        <div class="stat-change negative">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>5%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card recent-users">
+                        <div class="card-header">
+                            <h3>Nowi użytkownicy</h3>
+                            <a href="users.html" class="view-all">Zobacz wszystkich</a>
+                        </div>
+                        <div class="user-list">
+                            <div class="user-item">
+                                <img src="../images/user-avatar.png" alt="User" class="user-avatar">
+                                <div class="user-info">
+                                    <span class="user-name">Gracz123</span>
+                                    <span class="user-date">Dołączył dzisiaj</span>
+                                </div>
+                                <button class="action-btn"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                            <!-- Więcej użytkowników... -->
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card recent-posts">
+                        <div class="card-header">
+                            <h3>Ostatnie posty</h3>
+                            <a href="posts.html" class="view-all">Zobacz wszystkie</a>
+                        </div>
+                        <div class="post-list">
+                            <div class="post-item">
+                                <div class="post-info">
+                                    <h4>Aktualizacja serwera - 1.19.4</h4>
+                                    <span class="post-meta">przez Admin, wczoraj</span>
+                                </div>
+                                <div class="post-stats">
+                                    <span><i class="fas fa-comment"></i> 3</span>
+                                    <span><i class="fas fa-eye"></i> 156</span>
+                                </div>
+                            </div>
+                            <!-- Więcej postów... -->
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card recent-reports">
+                        <div class="card-header">
+                            <h3>Zgłoszenia</h3>
+                            <a href="reports.html" class="view-all">Zobacz wszystkie</a>
+                        </div>
+                        <div class="report-list">
+                            <div class="report-item">
+                                <div class="report-info">
+                                    <span class="report-type spam">Spam</span>
+                                    <h4>Zgłoszono komentarz</h4>
+                                    <span class="report-meta">przez User456, 2 godziny temu</span>
+                                </div>
+                                <div class="report-actions">
+                                    <button class="action-btn accept"><i class="fas fa-check"></i></button>
+                                    <button class="action-btn reject"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                            <!-- Więcej zgłoszeń... -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ustawienia - TineHC</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="admin-panel">
+    <div class="admin-container">
+        <nav class="admin-sidebar">
+            <div class="admin-brand">
+                <img src="../images/logo.png" alt="TineHC" class="admin-logo">
+                <h1>TineHC</h1>
+            </div>
+            
+            <div class="admin-user">
+                <img src="../images/admin-avatar.png" alt="Admin" class="admin-avatar">
+                <div class="admin-user-info">
+                    <span class="admin-username">Admin</span>
+                    <span class="admin-role">Administrator</span>
+                </div>
+            </div>
+            
+            <ul class="admin-menu">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="users.html">
+                        <i class="fas fa-users"></i>
+                        <span>Użytkownicy</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="posts.html">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Posty</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="reports.html">
+                        <i class="fas fa-flag"></i>
+                        <span>Zgłoszenia</span>
+                        <span class="badge">3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="bans.html">
+                        <i class="fas fa-ban"></i>
+                        <span>Bany</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Ustawienia</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Szukaj ustawień...">
+                </div>
+                
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">5</span>
+                    </button>
+                    <button class="theme-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="../index.html" class="exit-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div class="settings-page">
+                <div class="page-header">
+                    <h2>Ustawienia</h2>
+                    <div class="header-actions">
+                        <button class="save-settings-btn">
+                            <i class="fas fa-save"></i>
+                            Zapisz zmiany
+                        </button>
+                    </div>
+                </div>
+
+                <div class="settings-grid">
+                    <div class="settings-section">
+                        <h3>Ogólne</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label>Nazwa forum</label>
+                                <input type="text" value="TineHC Forum">
+                            </div>
+                            <div class="form-group">
+                                <label>Opis forum</label>
+                                <textarea rows="3">Oficjalne forum społeczności TineHC</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Logo</label>
+                                <div class="file-upload">
+                                    <img src="../images/logo.png" alt="Logo" class="preview">
+                                    <button class="upload-btn">
+                                        <i class="fas fa-upload"></i>
+                                        Zmień logo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Wygląd</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label>Motyw</label>
+                                <select>
+                                    <option value="light">Jasny</option>
+                                    <option value="dark">Ciemny</option>
+                                    <option value="auto">Automatyczny</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Kolor główny</label>
+                                <input type="color" value="#6366f1">
+                            </div>
+                            <div class="form-group">
+                                <label>Czcionka</label>
+                                <select>
+                                    <option value="inter">Inter</option>
+                                    <option value="roboto">Roboto</option>
+                                    <option value="opensans">Open Sans</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Użytkownicy</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label>Rejestracja</label>
+                                <div class="toggle-group">
+                                    <label class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span>Pozwól na rejestrację nowych użytkowników</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Weryfikacja email</label>
+                                <div class="toggle-group">
+                                    <label class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span>Wymagaj weryfikacji adresu email</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Minimalna długość hasła</label>
+                                <input type="number" value="8" min="6" max="32">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Posty i komentarze</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label>Moderacja</label>
+                                <div class="toggle-group">
+                                    <label class="toggle">
+                                        <input type="checkbox">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span>Wymagaj zatwierdzenia nowych postów</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Maksymalna długość posta</label>
+                                <input type="number" value="10000">
+                            </div>
+                            <div class="form-group">
+                                <label>Dozwolone załączniki</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <span>Obrazy</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <span>Dokumenty</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        <span>Archiwa</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Powiadomienia</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <span>Nowe zgłoszenia</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <span>Nowe rejestracje</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <span>Nowe posty do moderacji</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Discord Webhook</label>
+                                <input type="text" placeholder="https://discord.com/api/webhooks/...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section danger-zone">
+                        <h3>Strefa niebezpieczna</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <button class="danger-btn">
+                                    <i class="fas fa-trash"></i>
+                                    Wyczyść wszystkie dane
+                                </button>
+                                <p class="help-text">Ta akcja jest nieodwracalna i usunie wszystkie dane z forum.</p>
+                            </div>
+                            <div class="form-group">
+                                <button class="danger-btn">
+                                    <i class="fas fa-database"></i>
+                                    Eksportuj kopię zapasową
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarządzanie Zgłoszeniami - TineHC</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="admin-panel">
+    <div class="admin-container">
+        <nav class="admin-sidebar">
+            <div class="admin-brand">
+                <img src="../images/logo.png" alt="TineHC" class="admin-logo">
+                <h1>TineHC</h1>
+            </div>
+            
+            <div class="admin-user">
+                <img src="../images/admin-avatar.png" alt="Admin" class="admin-avatar">
+                <div class="admin-user-info">
+                    <span class="admin-username">Admin</span>
+                    <span class="admin-role">Administrator</span>
+                </div>
+            </div>
+            
+            <ul class="admin-menu">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="users.html">
+                        <i class="fas fa-users"></i>
+                        <span>Użytkownicy</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="posts.html">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Posty</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="reports.html">
+                        <i class="fas fa-flag"></i>
+                        <span>Zgłoszenia</span>
+                        <span class="badge">3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="bans.html">
+                        <i class="fas fa-ban"></i>
+                        <span>Bany</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Ustawienia</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Szukaj zgłoszeń...">
+                </div>
+                
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">5</span>
+                    </button>
+                    <button class="theme-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="../index.html" class="exit-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div class="reports-page">
+                <div class="page-header">
+                    <h2>Zarządzanie Zgłoszeniami</h2>
+                    <div class="header-actions">
+                        <button class="export-btn">
+                            <i class="fas fa-download"></i>
+                            Eksportuj
+                        </button>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Typ</label>
+                        <select>
+                            <option value="">Wszystkie</option>
+                            <option value="spam">Spam</option>
+                            <option value="abuse">Nadużycie</option>
+                            <option value="inappropriate">Nieodpowiednia treść</option>
+                            <option value="other">Inne</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select>
+                            <option value="">Wszystkie</option>
+                            <option value="pending">Oczekujące</option>
+                            <option value="resolved">Rozwiązane</option>
+                            <option value="rejected">Odrzucone</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Sortuj</label>
+                        <select>
+                            <option value="newest">Najnowsze</option>
+                            <option value="oldest">Najstarsze</option>
+                            <option value="priority">Priorytet</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="reports-list">
+                    <div class="report-card">
+                        <div class="report-header">
+                            <div class="report-meta">
+                                <span class="report-type spam">Spam</span>
+                                <span class="report-status pending">Oczekujące</span>
+                                <span class="report-priority high">Wysoki priorytet</span>
+                            </div>
+                            <div class="report-date">
+                                <i class="fas fa-clock"></i>
+                                2 godziny temu
+                            </div>
+                        </div>
+
+                        <div class="report-content">
+                            <div class="report-info">
+                                <h3>Zgłoszono komentarz</h3>
+                                <p class="report-description">
+                                    Użytkownik wielokrotnie spamuje tym samym komentarzem w różnych wątkach.
+                                </p>
+                            </div>
+
+                            <div class="reported-content">
+                                <div class="content-preview">
+                                    <i class="fas fa-comment"></i>
+                                    <div class="preview-text">
+                                        <p>Kup tanio diamenty! Odwiedź stronę www.scam.com...</p>
+                                        <span class="preview-meta">w poście "Aktualizacja serwera"</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="report-users">
+                                <div class="reporter">
+                                    <span class="label">Zgłaszający:</span>
+                                    <div class="user-info">
+                                        <img src="../images/user-avatar.png" alt="Reporter" class="user-avatar">
+                                        <span class="user-name">User456</span>
+                                    </div>
+                                </div>
+                                <div class="reported">
+                                    <span class="label">Zgłoszony:</span>
+                                    <div class="user-info">
+                                        <img src="../images/user-avatar.png" alt="Reported" class="user-avatar">
+                                        <span class="user-name">Spammer123</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="report-actions">
+                            <button class="action-btn view">
+                                <i class="fas fa-eye"></i>
+                                Zobacz treść
+                            </button>
+                            <button class="action-btn accept">
+                                <i class="fas fa-check"></i>
+                                Akceptuj
+                            </button>
+                            <button class="action-btn reject">
+                                <i class="fas fa-times"></i>
+                                Odrzuć
+                            </button>
+                            <button class="action-btn ban">
+                                <i class="fas fa-ban"></i>
+                                Zbanuj użytkownika
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Więcej kart zgłoszeń... -->
+                </div>
+
+                <div class="pagination">
+                    <button class="prev-page" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="page-numbers">
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <span>...</span>
+                        <button>10</button>
+                    </div>
+                    <button class="next-page">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html> 
